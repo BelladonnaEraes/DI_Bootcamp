@@ -1,0 +1,80 @@
+ /*------------------------------------------
+  Responsive Grid Media Queries - 1280, 1024, 768, 480
+   1280-1024   - desktop (default grid)
+   1024-768    - tablet landscape
+   768-480     - tablet 
+   480-less    - phone landscape & smaller
+
+@media all and (min-width: 1024px) and (max-width: 1280px) { }
+
+@media all and (min-width: 768px) and (max-width: 1024px) { }
+
+@media all and (min-width: 480px) and (max-width: 768px) { }
+
+@media all and (max-width: 480px) { }
+--------------------------------------------*/
+  * {
+  	box-sizing: content-box;
+  }
+  body {
+  	margin: 5%;
+    padding: 0;
+  }
+ li {
+	display: inline-block;
+	padding: 20px;
+	margin: 20px;
+}
+ul {
+	text-align: center;
+}
+div {
+width: 70%;
+height: auto;
+}
+
+@media all and (min-width: 768px) {
+h1, div {
+	font-size: 25px;
+}
+}
+@media all and (max-width: 600px) {
+h1, div {
+	font-size: 35px;
+}
+}
+@media all and (max-width: 600px) {
+nav {
+	background-color: yellow;
+	color: black;
+}
+}
+@media all and (min-width: 480px) and (max-width: 768px) {
+nav {
+	background-color: lightgreen;
+	color: black;
+}
+}
+@media all and (min-width: 768px) and (max-width: 1024px) {
+nav {
+	background-color: red;
+	color: white;
+}
+}
+@media all and (min-width: 1024px) {
+nav {
+	background-color: black;
+	color: white;
+}
+h1 {
+	position: absolute;
+	left: 5%;
+}
+ div {
+	position: absolute;
+	right: 5%;
+}
+
+}
+}
+
