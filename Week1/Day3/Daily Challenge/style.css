@@ -1,0 +1,31 @@
+div {
+	background: hotpink;
+	border: 2px solid blueviolet;
+	width: 100px;
+	height: 100px;
+	margin: 30px;
+}
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.box1 {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-content: space-around;
+
+}
+.box2 {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	align-content: space-around;
+}
+.box3 {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-content: space-around;
+}
