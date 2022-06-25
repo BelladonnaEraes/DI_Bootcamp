@@ -1,0 +1,102 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+h2 {
+	text-align: center;
+	color: #154660
+}
+* {
+    font-family: 'Raleway', sans-serif;
+}
+nav {
+	background-color: #154660;
+	list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+a {
+	color: white;
+	text-decoration: none;
+	text-align: center;
+	padding: 10px 10px;
+}
+.header {
+	background-image: url(pexels-johannes-plenio-1103970.jpg);
+	background-size: cover;
+	height: 50vh;
+	padding: 10vh 30vh 10vh 30vh;
+	color: #154660;
+	display: block;
+	font-size: 20px;
+/*About me and foto */	
+}
+.myfoto {
+  border-radius: 50%;
+  width: 30vh;
+  height: 30vh
+  margin: 5vh;
+  border: 3px solid #f1efde;
+}
+article {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+aside {
+	  float: right;
+	   width: 60%;
+	   margin: 5vh;
+	   border-left: 3px rgb(29, 107, 167) solid;
+	   padding-left: 10px; 
+}
+/*Portfolio*/
+
+div {
+	list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 10vh;
+}
+img {
+	width: 30vh;
+	height: 30vh
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;	
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 10px;
+}
+/*Footer*/
+footer img {
+	height: 5vh;
+}
+footer {
+	display: flex;
+	text-align: center;
+	flex-direction: column;
+}
+.social {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+}
+.main {
+	padding-left: 30vh;
+	padding-right: 30vh;
+	background-color: #f1efde;
+}
+
