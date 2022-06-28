@@ -66,4 +66,4 @@ if (users === (users.length=0)) {
 	console.log(users[0] + users[1] + "is online")
 } else if (users === (users.length>=3)) {
 	console.log(users[0] + users[1] + "and" + (users.length-2) + "are online")
-} 
+} /* (users ===  this is completely unnecessary try writing only what is needed*/
