@@ -128,10 +128,37 @@ let prices = {
 } 
 let shoppingList = ["banana", "orange", "apple"]
 
-function myBill() {
-    
+function isInStock(item) {
+	if(stock[item] && stock[item]>0){
+		return true;
+	}
+
+	return false;
+}
+function itemPrice(item) {
+	return prices[item];
 
 }
+
+function upDateStock(item) {
+	stock[item]--;
+}
+
+function myBill() {
+
+for (var i = 0; i <shoppingList.length; i++) {
+    	let item =shoppingList[i];
+    	if(isInStock(item)){
+    		console.log(item, itemPrice(item));
+    		upDateStock(item);
+    		sum +=itemPrise(item)
+    	}
+    }    
+    return sum;
+}
+
+console.log(myBill())
+
 
 //Exercise 6 : Vacations Costs
 /*Let’s create functions that calculate your vacation’s costs:
@@ -139,17 +166,61 @@ function myBill() {
 Define a function called hotelCost().
 It should ask the user for the number of nights they would like to stay in the hotel.
 If the user doesn’t answer or if the answer is not a number, ask again.
-The hotel costs $140 per night. The function should return the total price of the hotel.
+The hotel costs $140 per night. The function should return the total price of the hotel.*/
 
-Define a function called planeRideCost().
+/*function hotelCost() {
+
+let numberOfnight;
+
+do {
+  numberOfnight = prompt("How long would you want to stay in the hotel?", 0);
+} while (numberOfnight <= 0 && numberOfnight);
+
+let perCost = numberOfnight*140;
+console.log(perCost+"$");
+}
+
+hotelCost()
+
+
+/*Define a function called planeRideCost().
 It should ask the user for their destination.
 If the user doesn’t answer or if the answer is not a string, ask again.
 The function should return a different price depending on the location.
 “London”: 183$
 “Paris” : 220$
-All other destination : 300$
+All other destination : 300$*/
 
-Define a function called rentalCarCost().
+
+
+/*let distination;
+
+let other; 
+
+function planeRideCost() {
+
+do {
+  distination = prompt("What is your destination?", 0);
+
+} while (distination !=="London" || distination !=="Paris" || distination >=0  );
+
+if (distination = ) {
+	alert("183$")
+}
+
+else if (distination = "Paris") {
+	alert("220$")
+}
+
+else {
+	alert("300$")
+} 
+
+}
+planeRideCost()
+
+
+/*Define a function called rentalCarCost().
 It should ask the user for the number of days they would like to rent the car.
 If the user doesn’t answer or if the answer is not a number, ask again.
 Calculate the cost to rent the car. The car costs $40 everyday.
@@ -164,14 +235,11 @@ Call the function totalVacationCost()
 
 Bonus: Instead of using a prompt inside the 3 first functions, only use a prompt inside the totalVacationCost() function. You need to change the 3 first functions, accordingly.*/
 
-function hotelCost() {
-let numberOfnight = Number(prompt("How long would you want to stay in the hotel?"))
-	while (numberOfnight < 0) {
-	let perCost = numberOfnight*140; 
-  console.log(perCost+"$");
-}
-}
-//hotelCost()
+
+
+
+
+
 
 
 
