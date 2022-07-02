@@ -20,35 +20,32 @@ If the user didn’t enter a number (ie. if he entered another data type) alert 
 If the user didn’t enter a number between 0 and 10 alert “Sorry it’s not a good number, Goodbye”.
 Else (ie. he entered a number between 0 and 10), create a variable named computerNumber where the value is a random number between 0 and 10 (Hint: Use the built-in Math.random() function). Make sure that the number is rounded.*/
 
+let userAnsver;
+let userNumber;
+let computerNumber = Math.floor(Math.random() * 11);
+let count = 3
+
 
 function playTheGame() {
-	
-
-	let userAnsver;
-	let userNumber
-	    
-
-	   userAnsver = confirm("Do you want to play?")
-		if ((userAnsver) == false) 
-			 {alert("No problem, Goodbye")	
-		} else {
-		userNumber = prompt("the user to enter a number between 0 and 10")
-
-
-        if (isNaN(userNumber)) {
-		     alert("Sorry Not a number, Goodbye")
-		} else if (userNumber>10) {
-			alert("Sorry it’s not a good number, Goodbye")
-		} else {
-			let computerNumber = alert(Math.floor(Math.random() * 11))}
-		}
-
-		};
-		
+ 
+	userAnsver = confirm("Do you want to play?")
+	   if ((userAnsver) == false){
+	   alert("No problem, Goodbye")
+       } else {
+        userNumber1 (userNumber)
+        return console.log(computerNumber);
+       }
+}
+function userNumber1 (userNumber) { 
+	userNumber = prompt("the user to enter a number between 0 and 10")
+	if (isNaN(userNumber)) {
+     alert("Sorry Not a number, Goodbye")
+	} else if (userNumber>10) {
+	alert("Sorry it’s not a good number, Goodbye")
+	} else {  
+	compareNumbers()  
+}
 playTheGame()
-
-
-
 
 /*Outside of the playTheGame() function, create a new function named compareNumbers(userNumber,computerNumber) that takes 2 parameters : userNumber and computerNumber
 
@@ -61,19 +58,24 @@ If userNumber is lower than computerNumber, alert “Your number is smaller then
 
 If the user guessed more than 3 times, alert “out of chances” and exit the function.*/
 
-function compareNumbers(userNumber,computerNumber) {
+function compareNumbers(userNumber, computerNumber) {
+
 
      if (userNumber = computerNumber) {
      	alert("WINNER!")
      } else if (userNumber > computerNumber) {
      	alert("Your number is bigger then the computer’s, guess again")
-     	userNumber = Number(prompt("the user to enter a number between 0 and 10"))
+     	userNumber1 (userNumber)
      } else {
      	alert("Your number is smaller then the computer’s, guess again")
-     	userNumber = Number(prompt("the user to enter a number between 0 and 10"))
-     }
-}
+     	userNumber1 (userNumber)
+     } 
 
+}
+  
+
+
+ 
 
 
 
