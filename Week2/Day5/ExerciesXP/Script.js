@@ -76,7 +76,8 @@ function compareNumbers(userNumber, computerNumber) {
 
 
  
-
+////////////////////**************************************************
+	line 46 calls function compareNumbers() but without variables so there is definitly an error here. the code does loook good thu
 
 
 
