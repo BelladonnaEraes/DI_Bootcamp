@@ -1,0 +1,42 @@
+body {
+	display: flex;
+	flex-direction: row;
+    background-color: lightgray;
+    box-sizing: border-box;
+	margin: 2px;
+
+}
+
+.colorsDiv {
+ border: grey 1px solid;
+ height: 12vh;
+
+}
+#pallet {
+width:  30vw;
+height:  100vh;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+column-gap: 3px;
+grid-row-gap: 3px;
+
+}
+#button {
+	grid-column: 1/span 3; 
+}
+#grid {
+width:  70vw;
+height:  100vh;
+display: grid;
+box-sizing:  border-box;
+grid-template-columns: repeat(40,1fr);
+grid-template-rows: repeat(30,1fr);
+column-gap: 2px;
+grid-row-gap: 2px;
+margin: 2px;
+}
+#grid div {
+	background-color: white;
+
+}
