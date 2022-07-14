@@ -124,7 +124,7 @@ For example: Moooo I'm a cow, named Lily and I'm brown and white
 
 class Animal {
     constructor (name, type, color) {
-         this.nameAnimal = name;
+        this.nameAnimal = name;
         this.typeAnimal = type;
         this.colorAnimal = color;
     }
@@ -134,16 +134,16 @@ class Mamal extends Animal {
     constructor (name, type, color, sound) {
         super(name, type, color);
         this.soundAnimal = sound;
-
     }
     soundAn(){
+
         console.log(`${this.soundAnimal} I'm a ${this.type}, named ${this.name} and I'm ${this.color}`)
         
     }
 }
 
-let farmerCow = new Animal("Lily", "cow", "white","Mooo")
-//farmerCow.soundAn()
+let farmerCow = new Mamal("Lily", "cow", "white","Mooo")
+farmerCow.soundAn()
 
 
 
