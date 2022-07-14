@@ -53,14 +53,14 @@ const users1 = Object.entries(users)
 Instructions
 Analyze the code below. What will be the output?*/
 
-class Person {
-  constructor(name) {
-    this.name = name;
-  }
-}
+//class Person {
+//  constructor(name) {
+//    this.name = name;
+//  }
+//}
 
-const member = new Person('John');
-console.log(typeof member);
+//const member = new Person('John');
+//console.log(typeof member);
 
 
 // object
@@ -124,7 +124,7 @@ For example: Moooo I'm a cow, named Lily and I'm brown and white
 
 class Animal {
     constructor (name, type, color) {
-        this.nameAnimal = name;
+         this.nameAnimal = name;
         this.typeAnimal = type;
         this.colorAnimal = color;
     }
@@ -134,15 +134,16 @@ class Mamal extends Animal {
     constructor (name, type, color, sound) {
         super(name, type, color);
         this.soundAnimal = sound;
+
     }
     soundAn(){
-        return this.nameAnimal
-        return this.typeAnimal
-        return this.colorAnimal
+        console.log(`${this.soundAnimal} I'm a ${this.type}, named ${this.name} and I'm ${this.color}`)
+        
     }
 }
 
-let farmerCow = new soundAn("Lily", "cow", "white", "Moo")
+let farmerCow = new Animal("Lily", "cow", "white","Mooo")
+//farmerCow.soundAn()
 
 
 
