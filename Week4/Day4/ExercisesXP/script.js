@@ -142,7 +142,8 @@ class Mamal extends Animal {
     }
 }
 
-let farmerCow = new Mamal("Lily", "cow", "white","Mooo")
+
+let farmerCow = new Animal("Lily", "cow", "white","Mooo")
 farmerCow.soundAn()
 
 
