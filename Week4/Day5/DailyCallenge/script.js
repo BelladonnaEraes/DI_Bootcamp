@@ -1,12 +1,8 @@
 
 function comparison (arr1, arr2) {
-	let arr11 = Array.from(arr1)
-	let arr111 = arr11.filter((element) => arr11.sort())
-	console.log(arr111)
-	let arr22 = Array.from(arr2)
-	let arr222 = arr22.filter((elem) => arr22.sort())
-	console.log(arr222)	
-	let comparison2 
+	let arr11 = Array.from(arr1).sort()	
+	let arr22 = Array.from(arr2).sort()
+	console.log(arr11.toString() === arr22.toString())
 }
 
 let Astr = "astronomer"
