@@ -15,7 +15,6 @@ function submitName(e) {
      	lastname : inputNameLast.value
      }
      console.log(names)
-     let nameJson = JSON.stringify(names)
-     console.log(nameJson)
+     let nameJson = document.write(JSON.stringify(names))
 }
 
