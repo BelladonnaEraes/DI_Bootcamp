@@ -1,0 +1,27 @@
+body {
+	background-color: black;
+    background-image: url(https://i.giphy.com/media/TxVVB6PfWMjE4/200.webp);
+    font-family: 'Helvetica Neue';
+    color: yellow;
+    text-align: center;
+}
+img {
+	margin: 10px;
+}
+section {
+	width: 80vh;
+	height: 40vh;
+	border: 2px yellow solid;
+	border-radius: 20px;
+	margin: auto;
+}
+button {
+	margin: 10px;
+
+}
+.fa-3x {
+	color: white;
+	margin-top: 10vh;
+	display: none;
+}
+
