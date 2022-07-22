@@ -17,6 +17,10 @@ section {
 }
 button {
 	margin: 10px;
+	width: 50%;
+	padding: 3px;
+	border-radius: 10px;
+	border: yellow 1px solid;
 
 }
 .fa-3x {
@@ -24,4 +28,7 @@ button {
 	margin-top: 10vh;
 	display: none;
 }
-
+p, h3 {
+	color: white;
+	font-size: 3.3vh;
+}
