@@ -1,7 +1,11 @@
 let fromSelector = document.querySelector("#from")
 let toSelector = document.querySelector("#to")
 let option
-
+let p = document.querySelector("#paragraf")
+let form = document.querySelector("#form")
+let item
+let item1
+let h4 = document.querySelector("#h4")
 async function fromSelector0() {
 	let listCurr = await fetch("https://v6.exchangerate-api.com/v6/4b15e8d0eb3326f5e043117c/codes")
 	let doclistCurr = await listCurr.json()
@@ -38,23 +42,40 @@ fromSelector.addEventListener("change", selectCurrrr)
 toSelector.addEventListener("change", selectCurrrr)
 
  function selectCurrrr() {
-      let item = fromSelector.value
-       let item1 = toSelector.value
+      item = fromSelector.value
+       item1 = toSelector.value
        console.log(item, item1)
-       //compairCurr(item, item1)
+       compairCurr(item, item1)
 }
 
-console.log(selectCurrrr())
 
-
-
-
-/*async function compairCurr (first, second) {
+async function compairCurr (first, second) {
 	  let URLpair = `https://v6.exchangerate-api.com/v6/4b15e8d0eb3326f5e043117c/pair/${first}/${second}`
       let twoCurr = await fetch(URLpair)
 	  let twoCurr1 = await twoCurr.json()
-}*/
+	  let pToCurr = twoCurr1["conversion_rate"]
+	  p.innerText=`${pToCurr}`
+	  console.log(pToCurr)
+}
+compairCurr("AED", "AED")
 
+form.addEventListener("submit", amound)
+
+function amound (ev) {
+	ev.preventDefault()
+	let formValue = document.getElementById("input").value
+    console.log(formValue)
+    amountSumm(item, item1, formValue)
+}
+
+async function amountSumm (first, second, third) {
+	let urLSumm0 = `https://v6.exchangerate-api.com/v6/4b15e8d0eb3326f5e043117c/pair/${first}/${second}/${third}`
+	let urLSumm = await fetch(urLSumm0)
+	let urLSumm1 = await urLSumm.json()
+	console.log(urLSumm1["conversion_result"])
+	h4.innerText=`${urLSumm1["conversion_result"]}`
+
+}
 
 
 
