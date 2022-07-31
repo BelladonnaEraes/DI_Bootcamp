@@ -5,7 +5,12 @@ let displayTasks = (x) => {
 	return tasks;
 }
 let obj = displayTasks(localStorage.getItem("tasks"))
-//console.log(obj)
+let trueFalse = (tf) => {
+	let tfmeaning = tf.forEach((elem) => elem.isCompleted)
+	return tfmeaning
+}
+trueFalse(obj)
+console.log(trueFalse(obj))
 createAll(obj)
 function createAll(tasks12) {
    tasks12.forEach((elem) => {
@@ -13,6 +18,7 @@ function createAll(tasks12) {
 		document.body.appendChild(divTask)
 		h3 = document.createElement("h3")
 		divTask.appendChild(h3)
+		btnComp()
 		let p = document.createElement("p")
 		divTask.appendChild(p)
 		h3.appendChild(document.createTextNode(`Name : "${elem.name}"`))
@@ -21,7 +27,7 @@ function createAll(tasks12) {
 		h3.addEventListener("click", toggleForP=()=>{p.classList.toggle("hidden")})
 		createBackground(elem.isCompleted)
 		console.log(elem.isCompleted)
-		btnComp()
+		
 	})
 }
 
@@ -32,15 +38,17 @@ function createBackground (isCompleted1) {
 		h3.style.background = "lightgreen" 
 	}
 }
-console.log(obj)
 
 function btnComp() {
 	let btnCompl = document.createElement("button")
 	divTask.appendChild(btnCompl)
 	btnCompl.appendChild(document.createTextNode("Not completed"))
-	btnCompl.addEventListener("click", completedBut =()=> {
-		h3.classList.toggle("redgreen")
-		console.log()
+	btnCompl.addEventListener("click", completedBut =(e)=> {
+		let h33 = e.target.previousElementSibling
+		h33.classList.toggle("redgreen")
+		console.log(h33)
+	   btnCompl.innerHTML ="Completed"
+	   obj.isCompleted=true
 	})
 }
 
