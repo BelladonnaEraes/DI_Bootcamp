@@ -1,0 +1,166 @@
+Exercise 1 : Car And Components
+Instructions
+Part I : A Car Component
+
+In App.js create an object const carinfo = {name: "Ford", model: "Mustang"};
+
+In your React app create a new folder in the src path, name it Components. It should contain a Class Component named Car.js.
+
+In the Car.js component render a header with the carInfo model, for example This car is <model>.
+
+Import the Car.js component to the App.js.
+
+
+Part II : A constructor function
+
+Create a constructor function in the Car component, and add a color property in the state.
+
+Display the color property in the render() method, for example This car is <color> <model>.
+
+
+Part III : Garage
+
+Create another component inside your Components folder, called Garage.js.
+
+Use an attribute to pass a size to the Garage component, <Garage size="small" />.
+
+Use the Garage component inside the Car component and pass the size ‘small’. The Garage component should render Who lives in my <size> Garage?
+
+
+Exercise 2 : Events
+Instructions
+Part I:
+
+Create a new Class component named Events.
+
+Create an arrow function called clickMe. It should alert the string ‘I was clicked’.
+
+In the render() method, create a button that when clicked on, calls the clickMe function.
+
+Tip: Use event handler.
+Where should you create the clickMe function ?
+Expected output (without the grey border):
+events7
+
+
+
+Part II:
+
+In the render() method of the Events Class component, create an input tag that has an onKeyPress event handler, that listens to a function called handleKeyPress.
+
+keyEnter
+
+
+When you type something in the input field and press the ‘Enter key’, the handleKeyPress function will check if the ‘Enter key’ was pressed and will alert a message with the input text value::
+
+keyEnter2
+
+
+events8
+
+
+
+Part III:
+
+In the Events Class component, declare a property in the state object named isToggleOn and set it to true.
+
+In the render() method, create a button that has an onClick event that will switch the state property between ‘ON’ and ‘OFF’
+
+Create a function that will be called by the onClick event handler. In the function you should toggle the value of the isToggleOn property.
+
+Output for ‘ON’:
+
+on
+
+Output for ‘OFF’:
+
+off
+
+
+
+Exercise 3 : Phone And Components
+Instructions
+Part I : Phone
+
+Create a new Class Component named Phone. Use constructor, super(), and a state object with the following properties:
+
+this.state = {
+    brand: "Samsung",
+    model: "Galaxy S20",
+    color: "black",
+    year: 2020
+};
+
+
+In the render method of the Phone component, display the values of the state properties. Tip: this.state.propertyname
+
+
+Import the Phone component and display it in your App.js.
+
+Expected output (without the grey border):
+
+ninja8
+
+
+
+Part II : Change the Phone
+
+In the Phone component create a function named changeColor that updates the color property to ‘blue’
+
+In the render() method of the Phone component, add a button with an onClick event that will call the changeColor function to change the color property.
+
+Expected output (without the grey border):when you click the button
+
+ninja9
+
+
+
+Exercise 4 : ComponentDidMount
+Instructions
+Review
+
+React Lifecycle:
+
+Each component in React has a lifecycle which you can monitor and manipulate during its three main phases. The three phases are: Mounting, Updating, and Unmounting.
+
+Today we are going to work on the Mounting phase:
+
+Mounting means putting elements into the DOM. React has four built-in methods that gets called, in this order, when mounting a component:
+
+constructor()
+getDerivedStateFromProps()
+render()
+componentDidMount()
+
+
+The render() method is required and will always be called, the others are optional and will be called if you define them.
+
+The constructor() method is called before anything else, when the component is initiated, and it is the natural place to set up the initial state and other initial values.
+
+The constructor() method is called with the props, as arguments, and you should always start by calling the super(props) before anything else, this will initiate the parent’s constructor method and allows the component to inherit methods from its parent (React.Component).
+
+
+
+Create a new Class Component named Color. The state object of this component contains a property favoriteColor which value is “red”.
+
+Output the value in a header tag.
+
+Expected output (without the grey border):
+
+red
+
+
+Note : The componentDidMount() method is called after the component is rendered.
+Use the componentDidMount() method to call a timeout function, that changes the state of the favoriteColor property to “yellow” after 5 seconds.
+
+Expected output (without the grey border):
+
+yellow
+
+
+Note: The render() method is called when a component gets updated. It re-renders the DOM, with the new changes.
+Create a button that when clicked on, calls a function that changes the value of the favoriteColor property to “blue”.
+
+Expected output (without the grey border):
+
+blue
