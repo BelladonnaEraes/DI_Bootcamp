@@ -14,8 +14,10 @@ import 'tachyons'
             ]
         }
 }
-add =()=> {// eslint-disable-next-line
-  this.setState({votes:this.state.languages.votes+1})
+add =(lang)=> {// eslint-disable-next-line
+  lang.votes++
+  console.log(this.state.languages)
+  this.setState({languages:[...this.state.languages]})
 }
 render(){
 return (
@@ -25,7 +27,7 @@ return (
    {
      this.state.languages.map((item,i)=>{
       return (<div key={i} className="b--solid flex br3 ma2 pa3">
-      {item.votes} {item.name} <button id={i} onClick={this.add}>Click Here!</button></div>)
+      {item.votes} {item.name} <button id={i} onClick={()=>this.add(item)}>Click Here!</button></div>)
      })
    }
 
