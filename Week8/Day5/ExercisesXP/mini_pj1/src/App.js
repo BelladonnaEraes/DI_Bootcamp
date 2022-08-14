@@ -23,7 +23,6 @@ render(){
     <div>
       <div className="box">
         <Quotes data={this.state.quote} />
-
       <button onClick={this.getQuote}>New quote</button>
       </div>
     </div>
