@@ -1,4 +1,4 @@
-import {MOVIE_DETAIL} from '../actions/index.js'
+import {MOVIE_DETAIL, USERS_DETAIL} from '../actions/index.js'
 
 const initiState= {
 
@@ -9,12 +9,15 @@ const initiState= {
       {title: 'Avengers: Infinity War', releaseDate: '04-25-2018', rating: 8.3,},
       {title: 'Guardians of the Galaxy', releaseDate: '07-30-2014', rating: 7.9,}
   ],
-   movie: {title:'', releaseDate:'', rating:''}
+   movie: {},
+   users:[]
 }
 export const reducer =(state=initiState, action={}) => {
   switch (action.type) {
     case MOVIE_DETAIL:
     return {...state, movie:action.payload}
+    case USERS_DETAIL:
+    return {...state, users:action.payload}
     default:
     return {...state}
   }

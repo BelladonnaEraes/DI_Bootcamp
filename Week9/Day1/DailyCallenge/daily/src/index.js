@@ -1,13 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import {reducer} from './reducers/index.js';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import logger from 'redux-logger'
+import thunk from 'redux-thunk'
 
-const store = createStore(reducer)
+export const mylogger = (store) => (next) => (action) => {
+   console.log("store", store)
+   //store.dispatch({type:'MOVIE_DETAIL', payload:{title: 'Spider-Man: Homecoming', releaseDate: '05-07-2017', rating: 7.4}})
+   //console.log("action", action)
+  // next(action)
+   //console.log("next state", store.getState())
+}
+
+
+const store = createStore(reducer, applyMiddleware(mylogger, logger, thunk))
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -18,7 +30,4 @@ root.render(
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
