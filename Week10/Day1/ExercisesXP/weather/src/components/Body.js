@@ -37,10 +37,10 @@ console.log(search)
 
       <section className="current">
         <img src={search.current&&search.current.condition.icon}/>
+        <div>
         <h6>{search.location&&search.location.name}</h6>
-        <h6>{search.current&&search.current.temp_c}C</h6>
-        <h6>{search.current&&search.current.temp_f}F</h6>
-
+        <h6>{search.current&&search.current.temp_c} °C</h6>
+        </div>
       </section>
 
      <h1>{search.current&&search.current.condition.text}</h1>
@@ -51,8 +51,7 @@ console.log(search)
               <>
               <div key={i}>
                 <div>{item.date}</div>
-                <div>{item.day.avgtemp_c}C</div>
-                <div>{item.day.avgtemp_f}F</div>
+                <div>{item.day.avgtemp_c} °C</div>
                 <div>{item.day.condition.text}</div>
               </div>
               </>
