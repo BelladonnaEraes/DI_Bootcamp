@@ -1,0 +1,71 @@
+/*Navbar*/
+
+.navbar {
+  display: inline-flex;
+  background-color: lightblue;
+  width: 100%;
+  justify-content: space-between;
+}
+.navbar > div{
+  padding:20px
+}
+.linknavbar{
+  display: inline-flex;
+}
+.linknavbar > div{
+  padding-left:10px;
+  padding-right:10px;
+  height: auto;
+}
+.linknavbar > div:hover{
+  background-color: brown;
+}
+/*form and button*/
+input{
+  width: 80%;
+  border: 0.5px lightblue solid;
+  font-size: 12px;
+  height: 28px
+}
+button{
+  border: 0.5px lightblue solid;
+  height: 30px;
+  position: relative;
+  right: 14%;
+  background-color: lightblue;
+}
+
+.form {
+  width: 400px;
+  margin: auto;
+  margin: 10px
+}
+/*current forcast*/
+.datashow{
+  width: 70%;
+  padding:10%;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.current{
+  width: 20%;
+  margin-left: 10px;
+}
+
+h1{
+  text-align: center;
+  font-size: 40px;
+}
+.forecast{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 10px;
+}
+
+.forecast > div{
+  padding: 10px;
+  margin: 10px;
+}
