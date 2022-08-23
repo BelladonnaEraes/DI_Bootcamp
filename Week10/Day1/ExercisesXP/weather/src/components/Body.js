@@ -1,11 +1,18 @@
 import {useState, useEffect} from 'react'
-import './body.css'
-
+import './header.css';
 const Body =()=> {
+
 const [city, setCity] =useState('')
 const [search, setSearch]=useState({})
+const [citystore, setCitystore]=useState([])
+useEffect(() => {
+  localStorage.setItem('city', JSON.stringify(citystore));
+}, [citystore]);
 const getCity =(e)=> {
   setCity(e.target.value)
+}
+let handleAddstore=()=>{
+  setCitystore(city)
 }
 let handleClick=()=>{
 
@@ -26,11 +33,12 @@ fetch(`https://weatherapi-com.p.rapidapi.com/forecast.json?q=${city}&days=5`, op
 	.catch(err => console.error(err));
 }
 console.log(search)
+
   return(
     <>
     <div className="form">
     <input onChange={getCity}/>
-    <button onClick={handleClick}>Search</button>
+    <button onClick={handleClick} id='butsearch'>Search</button>
     </div>
 
       <div className="datashow">
@@ -42,7 +50,7 @@ console.log(search)
         <h6>{search.current&&search.current.temp_c} °C</h6>
         </div>
       </section>
-
+     <button id='butfav' onClick={handleAddstore}>Favorites</button>
      <h1>{search.current&&search.current.condition.text}</h1>
 
       <section className='forecast'>

@@ -1,14 +1,13 @@
-import Body from './components/Body.js';
+
 import './App.css';
 import Header from './components/Header.js';
+import Body from './components/Body.js';
 function App() {
   return (
-    <div>
-      <header >
-      < Header/>
-       <Body />
-      </header>
-    </div>
+     <>
+     <Header/>
+     <Body/>
+     </>
   );
 }
 
