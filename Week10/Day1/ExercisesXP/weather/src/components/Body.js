@@ -1,12 +1,12 @@
 import {useState, useEffect} from 'react'
-import './header.css';
+//import './header.css';
 const Body =()=> {
 
 const [city, setCity] =useState('')
 const [search, setSearch]=useState({})
 const [citystore, setCitystore]=useState([])
 useEffect(() => {
-  localStorage.setItem('city', JSON.stringify(citystore));
+  localStorage.setItem('city'+citystore, JSON.stringify(citystore));
 }, [citystore]);
 const getCity =(e)=> {
   setCity(e.target.value)
@@ -59,7 +59,7 @@ console.log(search)
               <>
               <div key={i}>
                 <div>{item.date}</div>
-                <div>{item.day.avgtemp_c} °C</div>
+                <div>{item.day.avgtemp_c}</div>
                 <div>{item.day.condition.text}</div>
               </div>
               </>

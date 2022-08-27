@@ -1,4 +1,5 @@
-/*Navbar*/
+/*
+
 *{
   font-family: 'Inconsolata', monospace;
 }
@@ -22,7 +23,7 @@
 .linknavbar > div:hover{
   background-color: brown;
 }
-/*form and button*/
+
 input{
   width: 80%;
   border: 0.5px lightblue solid;
@@ -42,7 +43,10 @@ input{
   margin: auto;
   margin: 10px
 }
-/*current forcast*/
+
+
+
+
 .datashow{
   width: 70%;
   padding:10%;
@@ -92,4 +96,4 @@ h1{
   position: absolute;
   right: 20%;
   top: 30%;
-}
+}*/
