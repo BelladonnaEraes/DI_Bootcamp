@@ -28,7 +28,7 @@ const Personality=()=>{
     <input/><br/>
     <lable> Blog url</lable>
     <input/><br/>
-    <button>Next step</button>
+    <input type="submit" value="Next step" />
     </form>
     </>
   )
