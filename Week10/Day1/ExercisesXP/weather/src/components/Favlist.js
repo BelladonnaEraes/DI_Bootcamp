@@ -30,7 +30,7 @@ const Favlist=()=>{
   const [city, setCity] = useState(allData)
   useEffect(() => {
    console.log(allData)
-  }, );
+ }, []);
 return(
   <>
   <div style={{display:'flex'}}>
