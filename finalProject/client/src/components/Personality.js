@@ -1,9 +1,10 @@
-
+import Country from './Country.js'
 
 
 const Personality=()=>{
   return(
     <>
+    <h1>Step 1: Personal information</h1>
     <form>
     <lable>First name</lable>
     <input/>
@@ -14,7 +15,7 @@ const Personality=()=>{
     <lable>Country and city</lable>
     <input/><br/>
     <lable>Telephone number</lable>
-    <input/><br/>
+    <Country/><input/><br/>
     <lable>E-mail</lable>
     <input/><br/>
     <lable>Github</lable>
@@ -27,6 +28,7 @@ const Personality=()=>{
     <input/><br/>
     <lable> Blog url</lable>
     <input/><br/>
+    <button>Next step</button>
     </form>
     </>
   )
