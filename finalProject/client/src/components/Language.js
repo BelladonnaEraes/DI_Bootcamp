@@ -1,4 +1,10 @@
-const Language =()=>{
+import {connect} from 'react-redux';
+import {getLanguage, getLanguageLavel, getLangAll} from '../redux/actions.js'
+
+
+const Language =(props)=>{
+
+
   const languages = [
     { code : 'ab', name : 'Abkhazian' },
     { code : 'aa', name : 'Afar' },
@@ -194,29 +200,37 @@ const Language =()=>{
 ]
 return(
   <>
-  <select>
+  <div>
+  <select onChange={(e)=>props.language(e.target.value)}>
     {
       languages.map((item, i)=>{
         return(
-          <option key={i}>{item.name}</option>
+          <option key={i} value={item.name}>{item.name}</option>
         )
-
       })
-
     }
   </select>
-  <select>
+  <select onChange={(e)=>props.languageLev(e.target.value)}>
     {
       levels.map((item, i)=>{
         return(
-          <option key={i}>{item.level}</option>
+          <option key={i} value={item.level}>{item.level}</option>
         )
-
       })
-
     }
   </select>
+  <button onClick={()=>props.getLangAll()}>Add languages</button>
+    </div>
   </>
 )
 }
-export default Language ;
+
+const mapDispatchToProp= (dispatch) => {
+  return {
+  language: (val)=>dispatch(getLanguage(val)),
+  languageLev: (val)=>dispatch(getLanguageLavel(val)),
+  getLangAll: ()=>dispatch(getLangAll())
+}
+}
+
+export default connect(null, mapDispatchToProp)(Language)

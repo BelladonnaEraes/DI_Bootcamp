@@ -2,6 +2,10 @@ import Allparts from './components/Allparts.js'
 import './App.css';
 import {connect} from 'react-redux'
 import Readylist from './components/Readylist.js'
+import Experience from './components/Experience.js';
+import Personality from './components/Personality.js';
+
+
 function App() {
   return (
     <div className="App">

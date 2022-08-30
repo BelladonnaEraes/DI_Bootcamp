@@ -2,6 +2,7 @@ import Country from './Country.js'
 import {connect} from 'react-redux'
 import {getValue} from '../redux/actions.js'
 import React from "react"
+import TextField from '@mui/material/TextField';
 
 class Personality extends React.Component {
   constructor(){
@@ -39,6 +40,7 @@ handleSubmit=(e)=>{
     <h1>Step 1: Personal information</h1>
     <form onSubmit={this.handleSubmit}>
     <label>First name</label>
+    {/*<TextField id="standard-basic" label="Standard" variant="standard" />*/}
     <input onChange={(e)=>this.handleChange(e)} name='fname' type='text'/>
     <label>Last name</label>
     <input onChange={(e)=>this.handleChange(e)} name='lname' type='text'/><br/>

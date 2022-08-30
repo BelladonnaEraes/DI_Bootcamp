@@ -24,7 +24,6 @@ import React from "react"
   }
   handleSubmit=(e)=>{
     e.preventDefault();
-    console.log(this.state.formvalues2)
     this.props.getValue2(this.state.formvalues2)
   }
     render(){

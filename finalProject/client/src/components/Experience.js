@@ -51,6 +51,7 @@ handleSubmit=(e)=>{
       <label>Name of organisation</label><input onChange={(e)=>this.handleChange(e)} name='organisation' type='text'/>
       <label>Years</label><input onChange={(e)=>this.handleChange(e)} name='organisation_years' type='text'/>
       <label>Description</label>
+      <button>Add more</button>
       <textarea onChange={(e)=>this.handleChange(e)} name='organisation_description' type='text'></textarea><br/>
       <input type="submit" value="Next step" />
     </form>
