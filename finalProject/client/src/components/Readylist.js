@@ -26,6 +26,7 @@ const Readylist =(props)=>{
         <h3>TECHNICAL PROJECTS</h3>
         <p><strong></strong>-<a href="{props.formvalues.github}" target="_blank">Github</a></p>
         <h3>TECHNICAL SKILLS</h3>
+        <p>{props.skills[1]&&props.skills[1].skill}</p>
         <p>{props.all_project[1]&&props.all_project[1].name_project}</p>
         <h3>EXPERIENCE</h3>
         <p>{props.exp_job[1]&&props.exp_job[1].position}</p>
@@ -54,7 +55,8 @@ const mapStateToProps=(state)=>{
     formvalues2:state.formvalues2,
     langAll:state.langAll,
     all_project:state.all_project,
-    exp_job:state.exp_job
+    exp_job:state.exp_job,
+    skills:state.skills
   }
 }
 

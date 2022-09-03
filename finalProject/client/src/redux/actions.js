@@ -4,6 +4,8 @@ export const NAME_PROJECT ='NAME_PROJECT'
 export const NAME_PROJECT_URL='NAME_PROJECT_URL'
 export const NAME_PROJECT_DESCRIPTION='NAME_PROJECT_DESCRIPTION'
 export const ALL_PROJECTS='ALL_PROJECTS'
+export const ADD_SKILL='ADD_SKILL'
+export const ADD_SKILLS='ADD_SKILLS'
 export const POSISION_JOB='POSISION_JOB'
 export const POSISION_CITY='POSISION_CITY'
 export const POSISION_ORGANISATION='POSISION_ORGANISATION'
@@ -52,6 +54,17 @@ export const getNameProjDesc =(value)=>{
 export const getAllProj =()=>{
   return{
     type:ALL_PROJECTS
+  }
+}
+export const getSkill =(value)=>{
+  return{
+    type:ADD_SKILL,
+    payload:value
+  }
+}
+export const getSkills =()=>{
+  return{
+    type:ADD_SKILLS,
   }
 }
 

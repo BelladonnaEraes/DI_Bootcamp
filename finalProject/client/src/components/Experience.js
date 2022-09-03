@@ -6,13 +6,16 @@ import Input from '@mui/material/Input';
 import Button from '@mui/material/Button';
 import Projects from './Projects.js'
 import Expjob from './Expjob.js'
+import MultipleSelectChip from './Skills.js'
+
+
+
 class Experience extends React.Component{
   constructor(){
   super()
   this.state={
     formvalues1:{
-      summary:'',
-      skills:''
+      summary:''
     }
   }
 }
@@ -35,6 +38,7 @@ handleSubmit=(e)=>{
     <form onSubmit={this.handleSubmit}>
     <Projects/>
     <Expjob />
+    <MultipleSelectChip/>
     <TextField
          id="standard-multiline-static"
          label="Summary"
@@ -44,7 +48,6 @@ handleSubmit=(e)=>{
          style={{margin:'10px',width:'43%'}}
          onChange={(e)=>this.handleChange(e)} name='summary' type='text'
        /><br/>
-      <Input placeholder="Technical skills" onChange={(e)=>this.handleChange(e)} name='skills' type='text' style={{margin:'10px',width:'43%'}}/><br/>
       <Button type="submit" variant="text" style={{margin:'10px'}}>Next step</Button>
     </form>
     </>

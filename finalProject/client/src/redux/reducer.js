@@ -4,6 +4,8 @@ import {VALUE_INPUT,
         NAME_PROJECT_URL,
         NAME_PROJECT_DESCRIPTION,
         ALL_PROJECTS,
+        ADD_SKILL,
+        ADD_SKILLS,
         POSISION_JOB,
         POSISION_CITY,
         POSISION_ORGANISATION,
@@ -38,6 +40,9 @@ const initState={
       organisation_years:'',
       organisation_description:''
     }
+  ],
+  skills:[
+    {skill:''}
   ],
   formvalues2:[
     {
@@ -78,6 +83,14 @@ export const reducer = (state=initState, action={}) => {
                             })
     return {...state, all_project: [...state.all_project]}
 
+    case ADD_SKILL:
+    return {...state, skill: action.payload}
+
+    case ADD_SKILLS:
+    console.log("skills", state.skills )
+    state.skills.push({skill:state.skill
+                            })
+    return {...state, all_project: [...state.all_project]}
 
 
     case POSISION_JOB:
