@@ -1,9 +1,12 @@
 import {connect} from 'react-redux';
-import {getLanguage, getLanguageLavel, getLangAll} from '../redux/actions.js'
-
+import {getLanguage, getLanguageLavel, getLangAll} from '../redux/actions.js';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
+import Button from '@mui/material/Button';
 
 const Language =(props)=>{
-
 
   const languages = [
     { code : 'ab', name : 'Abkhazian' },
@@ -198,33 +201,66 @@ const Language =(props)=>{
   {level:"Full Professional Proficiency"},
   {level:"Native or Bilingual Proficiency"}
 ]
+
 return(
   <>
   <div>
-  <select onChange={(e)=>props.language(e.target.value)}>
+  <FormControl variant="standard" style={{margin:'10px',width:'25%'}}>
+  <InputLabel id="demo-simple-select-standard-label">Language</InputLabel>
+  <Select
+  labelId="demo-simple-select-standard-label"
+  id="demo-simple-select-standard"
+  label="Language"
+
+  onChange={(e)=>props.language(e.target.value)}>
     {
       languages.map((item, i)=>{
         return(
-          <option key={i} value={item.name}>{item.name}</option>
+          <MenuItem key={i} value={item.name}>{item.name}</MenuItem>
         )
       })
     }
-  </select>
-  <select onChange={(e)=>props.languageLev(e.target.value)}>
+  </Select>
+  </FormControl>
+
+  <FormControl variant="standard" style={{margin:'10px',width:'25%'}}>
+  <InputLabel id="demo-simple-select-standard-label">Level</InputLabel>
+  <Select
+  labelId="demo-simple-select-standard-label"
+  id="demo-simple-select-standard"
+  onChange={(e)=>props.languageLev(e.target.value)}>
     {
       levels.map((item, i)=>{
         return(
-          <option key={i} value={item.level}>{item.level}</option>
+
+          <MenuItem key={i} value={item.level}>{item.level}</MenuItem>
         )
       })
     }
-  </select>
-  <button onClick={()=>props.getLangAll()}>Add languages</button>
+  </Select>
+  </FormControl><br/>
+  <Button onClick={()=>props.getLangAll()} style={{margin:'10px'}}>Add language</Button>
+  <div>
+  {
+    props.langAll.map((item)=>{
+      return
+      (
+      <>
+        <div>{item.languageVal} <em>{item.langLevel}</em></div>
+      </>
+      )
+    })
+  }
+  </div>
     </div>
   </>
 )
 }
-
+const mapStateToProps=(state)=>{
+  return {
+    langAll:state.langAll
+  }
+}
 const mapDispatchToProp= (dispatch) => {
   return {
   language: (val)=>dispatch(getLanguage(val)),
@@ -233,4 +269,4 @@ const mapDispatchToProp= (dispatch) => {
 }
 }
 
-export default connect(null, mapDispatchToProp)(Language)
+export default connect(mapStateToProps, mapDispatchToProp)(Language)

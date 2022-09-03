@@ -1,8 +1,9 @@
-import Country from './Country.js'
 import {connect} from 'react-redux'
 import {getValue} from '../redux/actions.js'
 import React from "react"
-import TextField from '@mui/material/TextField';
+import Input from '@mui/material/Input';
+import Button from '@mui/material/Button';
+import './stylecomponents.css'
 
 class Personality extends React.Component {
   constructor(){
@@ -16,6 +17,7 @@ class Personality extends React.Component {
       telephone:'',
       mail:'',
       github:'',
+      linkedin:'',
       portfolio:'',
       website:'',
       blog:''
@@ -39,30 +41,18 @@ handleSubmit=(e)=>{
     <>
     <h1>Step 1: Personal information</h1>
     <form onSubmit={this.handleSubmit}>
-    <label>First name</label>
-    {/*<TextField id="standard-basic" label="Standard" variant="standard" />*/}
-    <input onChange={(e)=>this.handleChange(e)} name='fname' type='text'/>
-    <label>Last name</label>
-    <input onChange={(e)=>this.handleChange(e)} name='lname' type='text'/><br/>
-    <label>Profession</label>
-    <input onChange={(e)=>this.handleChange(e)} name='profession' type='text'/><br/>
-    <label onChange={(e)=>this.handleChange(e)} name='city'>City</label>
-    <input/><br/>
-    <label >Telephone number</label>
-    <Country/><input onChange={(e)=>this.handleChange(e)} name='telephone'/><br/>
-    <label>E-mail</label>
-    <input onChange={(e)=>this.handleChange(e)} name='mail'/><br/>
-    <label>Github</label>
-    <input onChange={(e)=>this.handleChange(e)} name='github'/><br/>
-    <label> LinkedIn</label>
-    <input onChange={(e)=>this.handleChange(e)} name='linkedin'/><br/>
-    <label> Personal portfolio</label>
-    <input onChange={(e)=>this.handleChange(e)} name='portfolio'/><br/>
-    <label> Website URL</label>
-    <input onChange={(e)=>this.handleChange(e)} name='website'/><br/>
-    <label> Blog url</label>
-    <input onChange={(e)=>this.handleChange(e)} name='blog'/><br/>
-    <input type="submit" value="Next step" />
+    <Input placeholder="First name" onChange={(e)=>this.handleChange(e)} name='fname' type='text' style={{margin:'10px',width:'20%'}}/>
+    <Input placeholder="Last name" onChange={(e)=>this.handleChange(e)} name='lname' type='text' style={{margin:'10px',width:'20%'}}/><br/>
+    <Input placeholder="Profession" onChange={(e)=>this.handleChange(e)} name='profession' type='text' style={{margin:'10px',width:'20%'}}/>
+    <Input placeholder="City" onChange={(e)=>this.handleChange(e)} name='city' style={{margin:'10px',width:'20%'}}/><br/>
+    <Input placeholder="Telephone number" onChange={(e)=>this.handleChange(e)} name='telephone' style={{margin:'10px',width:'20%'}}/>
+    <Input placeholder="E-mail" onChange={(e)=>this.handleChange(e)} name='mail' style={{margin:'10px',width:'20%'}}/><br/>
+    <Input placeholder="Github" onChange={(e)=>this.handleChange(e)} name='github' style={{margin:'10px',width:'43%'}}/><br/>
+    <Input placeholder="LinkedIn" onChange={(e)=>this.handleChange(e)} name='linkedin' style={{margin:'10px',width:'43%'}}/><br/>
+    <Input placeholder="Personal portfolio" onChange={(e)=>this.handleChange(e)} name='portfolio' style={{margin:'10px',width:'43%'}}/><br/>
+    <Input placeholder="Website URL" onChange={(e)=>this.handleChange(e)} name='website' style={{margin:'10px',width:'43%'}}/><br/>
+    <Input placeholder="Blog url" onChange={(e)=>this.handleChange(e)} name='blog' style={{margin:'10px',width:'43%'}}/><br/>
+    <Button type="submit" variant="text" style={{margin:'10px'}}>Next step</Button>
     </form>
     </>
   )
