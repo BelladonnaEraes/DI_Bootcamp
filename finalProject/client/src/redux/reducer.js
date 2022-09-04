@@ -53,8 +53,7 @@ const initState={
     }
   ],
   langAll:[
-    {languageVal:'',
-    langLevel:''}
+
   ]
 }
 
@@ -109,13 +108,13 @@ export const reducer = (state=initState, action={}) => {
     return {...state, organisation_description: action.payload}
 
     case EXP_JOB:
+    
     console.log("exp_job", state.exp_job )
     state.exp_job.push({position:state.position,
                             position_city:state.position_city,
                             organisation:state.organisation,
                             organisation_years:state.organisation_years,
-                            organisation_description:state.organisation_description
-                            })
+                            organisation_description:state.organisation_description})
 
     case VALUE_EDUCATION_PROF:
     return {...state, education_profession: action.payload}

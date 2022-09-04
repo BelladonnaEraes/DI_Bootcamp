@@ -4,7 +4,7 @@ import React from "react"
 import TextField from '@mui/material/TextField';
 import Input from '@mui/material/Input';
 import Button from '@mui/material/Button';
-
+import './stylecomponents.css'
 
 
 const Expjob =(props)=>{

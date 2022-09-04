@@ -4,6 +4,7 @@ import {getValue2, getEduCityuProf, getEduCity, getEduPlace, getEduYears} from '
 import React from "react"
 import Input from '@mui/material/Input';
 import Button from '@mui/material/Button';
+import './stylecomponents.css'
 
 const Eduandlang =(props)=>{
 
@@ -19,17 +20,17 @@ console.log("Eduandlang", props.formvalues2 )
                  name='education_profession' type='text'
                  style={{margin:'10px',width:'45%'}}/><br/>
           <Input placeholder="Location"
-                 onChange={(e)=>props.getEduCity(e)}
+                 onChange={(e)=>props.getEduCity(e.target.value)}
                  name='education_city'
                  type='text'
                  style={{margin:'10px',width:'45%'}}/><br/>
           <Input placeholder="Name of education place"
-                 onChange={(e)=>props.getEduPlace(e)}
+                 onChange={(e)=>props.getEduPlace(e.target.value)}
                  name='education_place'
                  type='text'
                  style={{margin:'10px',width:'45%'}}/><br/>
           <Input placeholder="Years of studiyng"
-                 onChange={(e)=>props.getEduYears(e)}
+                 onChange={(e)=>props.getEduYears(e.target.value)}
                  name='education_years'
                  type='text'
                  style={{margin:'10px',width:'45%'}}/><br/>
@@ -41,8 +42,7 @@ console.log("Eduandlang", props.formvalues2 )
 
           {
             props.formvalues2.map(item=>{
-              return
-              (
+              return(
               <div>
                 <div>{item.education_profession}</div>
                 <div>{item.education_city}</div>

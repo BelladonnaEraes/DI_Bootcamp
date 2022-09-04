@@ -1,8 +1,7 @@
 import Allparts from './components/Allparts.js'
-import './App.css';
-import Readylist from './components/Readylist.js'
+import Readylist from './components/ready/Readylist.js'
 import {Routes, Route, Link } from "react-router-dom"
-
+import './components/stylecomponents.css'
 
 function App() {
   return (

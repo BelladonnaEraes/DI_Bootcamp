@@ -7,7 +7,7 @@ import Button from '@mui/material/Button';
 import Projects from './Projects.js'
 import Expjob from './Expjob.js'
 import MultipleSelectChip from './Skills.js'
-
+import './stylecomponents.css'
 
 
 class Experience extends React.Component{
