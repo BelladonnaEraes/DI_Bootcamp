@@ -1,3 +1,4 @@
+import axios from 'axios';
 export const VALUE_INPUT='VALUE_INPUT'
 export const VALUE_INPUT1='VALUE_INPUT1'
 export const NAME_PROJECT ='NAME_PROJECT'
@@ -23,10 +24,14 @@ export const LANG_ALL='LANG_ALL'
 export const ALL_DATA='ALL_DATA'
 
 
-export const getAlldata =()=>(dispatch,getStore)=>{
+export const getAlldata = (id) =>  async (dispatch,getStore) => {
   console.log('store=>',JSON.stringify(getStore()))
-  return{
-    type:ALL_DATA
+  try {
+     let result = await axios.post('/home', {json_data:JSON.stringify(getStore()),user_id:id})
+     console.log(result);
+     dispatch({type:ALL_DATA})
+  } catch(e){
+      console.log(e);
   }
 }
 

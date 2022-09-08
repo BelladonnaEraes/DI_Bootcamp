@@ -34,7 +34,7 @@ handleSubmit=(e)=>{
   render(){
   return(
     <>
-    <h1>Step 2: Experience information</h1>
+    <h3 style={{margin:'30px'}}><i>Step 2: Experience information</i></h3>
     <form onSubmit={this.handleSubmit}>
     <Projects/>
     <Expjob />
@@ -48,7 +48,7 @@ handleSubmit=(e)=>{
          style={{margin:'10px',width:'43%'}}
          onChange={(e)=>this.handleChange(e)} name='summary' type='text'
        /><br/>
-      <Button type="submit" variant="text" style={{margin:'10px'}}>Next step</Button>
+      <Button type="submit" variant="contained" style={{margin:'20px'}}>Next step</Button>
     </form>
     </>
   )

@@ -25,7 +25,7 @@ const skill = [
 return(
   <>
   <div>
-  <FormControl variant="standard" style={{margin:'10px',width:'25%'}}>
+  <FormControl variant="standard" style={{margin:'20px',width:'43%'}}>
   <InputLabel id="demo-simple-select-standard-label">Skills</InputLabel>
   <Select
   labelId="demo-simple-select-standard-label"
@@ -41,9 +41,9 @@ return(
       })
     }
   </Select>
-  </FormControl>
+  </FormControl><br/>
 
-  <Button onClick={()=>props.getSkills()} style={{margin:'10px'}}>Add skill</Button>
+  <Button onClick={()=>props.getSkills()} variant="contained" style={{margin:'10px'}}>Add skill</Button>
   </div>
   </>
   );

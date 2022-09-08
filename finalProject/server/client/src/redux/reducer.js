@@ -55,7 +55,7 @@ const initState={
   ],
   langAll:[
   ],
-  alldata:[
+  json_data:[
 
   ]
 }
@@ -64,8 +64,8 @@ export const reducer = (state=initState, action={}) => {
   switch (action.type){
 
     case ALL_DATA:
-    console.log("all_project", state.all_project )
-    state.alldata.push({formvalues:state.formvalues,
+    console.log("json_data", state.json_data )
+    state.json_data.push({formvalues:state.formvalues,
                         formvalues1:state.formvalues1,
                         all_project:state.all_project,
                         exp_job:state.exp_job,
@@ -73,7 +73,7 @@ export const reducer = (state=initState, action={}) => {
                         formvalues2:state.formvalues2,
                         langAll:state.langAll
                         })
-    return {...state, alldata: [...state.alldata]}
+    return {...state, json_data: [...state.json_data]}
 
 
 

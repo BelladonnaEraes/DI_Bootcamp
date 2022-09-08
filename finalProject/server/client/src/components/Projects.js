@@ -15,7 +15,7 @@ const Projects=(props)=>{
     <h4>Technical project</h4><br/>
     <Input placeholder="Name" onChange={(e)=>props.getNameProj(e.target.value)} name='name_project' type='text' style={{margin:'10px'}} />
     <Input placeholder="Url" onChange={(e)=>props.getNameProjUrl(e.target.value)} name='name_project_url' type='text' style={{width:'40%'}}/><br/>
-    
+
     <TextField
          id="standard-multiline-static"
          label="Description"
@@ -25,7 +25,7 @@ const Projects=(props)=>{
          style={{margin:'10px',width:'43%'}}
          onChange={(e)=>props.getNameProjDesc(e.target.value)} name='name_project_description' type='text'
        /><br/>
-     <Button onClick={()=>props.getAllProj()} variant="text" style={{margin:'10px'}}>Add project</Button>
+     <Button onClick={()=>props.getAllProj()} variant="contained" style={{margin:'10px'}}>Add project</Button>
     </>
   )
 }

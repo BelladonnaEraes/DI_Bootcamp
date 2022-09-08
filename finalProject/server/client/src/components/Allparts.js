@@ -5,14 +5,20 @@ import './stylecomponents.css'
 import Button from '@mui/material/Button';
 import {connect} from 'react-redux'
 import {getAlldata} from '../redux/actions.js'
-
+import {useContext} from 'react'
+import axios from 'axios';
+import jwt_decode from 'jwt-decode'
+import {AppContext} from '../App'
 
 const Allparts=(props)=>{
-
-  const saveAll =(e)=>{
+const {token} = useContext(AppContext);
+  const saveAll = (e)=>{
     e.preventDefault()
-    console.log('alldata',props.alldata)
-    props.getAlldata()
+    const decode = jwt_decode(token);
+    const user_id = decode.id
+    console.log('json_data',props.json_data)
+    props.getAlldata(user_id)
+
   }
 
   return(
@@ -21,7 +27,7 @@ const Allparts=(props)=>{
     <Experience/>
     <Eduandlang/>
     <Button type="submit"
-            variant="text"
+            variant="contained"
             style={{margin:'10px'}}
             onClick={saveAll}>Finish</Button>
     </>
@@ -30,12 +36,12 @@ const Allparts=(props)=>{
 
 const mapStateToProps=(state)=>{
   return {
-      alldata:state.alldata
+      json_data:state.json_data
   }
 }
 const mapDispatchToProp = (dispatch) => {
   return {
-     getAlldata:() => dispatch(getAlldata())
+     getAlldata:(id) => dispatch(getAlldata(id))
   }
 }
 

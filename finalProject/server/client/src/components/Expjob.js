@@ -26,7 +26,7 @@ const Expjob =(props)=>{
          style={{margin:'10px',width:'43%'}}
          onChange={(e)=>props.getPosDescr(e.target.value)} name='organisation_description' type='text'
        /><br/>
-       <Button onClick={()=>props.getExpJob()} variant="text" style={{margin:'10px'}}>Add experience</Button><br/>
+       <Button onClick={()=>props.getExpJob()} variant="contained" style={{margin:'10px'}}>Add experience</Button><br/>
        </>
   )
 }

@@ -9,10 +9,12 @@ import './stylecomponents.css'
 const Eduandlang =(props)=>{
 
 
+
+
 console.log("Eduandlang", props.formvalues2 )
   return(
     <>
-    <h1>Step 3: Education and language information</h1>
+    <h3 style={{margin:'30px'}}><i>Step 3: Education and language information</i></h3>
     <form >
           <h4>Education</h4><br/>
           <Input placeholder="Name of profession"
@@ -36,7 +38,7 @@ console.log("Eduandlang", props.formvalues2 )
                  style={{margin:'10px',width:'45%'}}/><br/>
                  <div>{props.formvalues2[1]&&props.formvalues2[1].education_profession}</div>
           <Button onClick={()=>props.getValue2()}
-                  variant="text"
+                  variant="contained"
                   style={{margin:'10px'}}>Add education</Button>
           <div>
 

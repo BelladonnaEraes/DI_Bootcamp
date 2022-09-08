@@ -239,28 +239,12 @@ return(
     }
   </Select>
   </FormControl><br/>
-  <Button onClick={()=>props.getLangAll()} style={{margin:'10px'}}>Add language</Button>
-  <div>
-  {
-    props.langAll.map((item)=>{
-      return
-      (
-      <>
-        <div>{item.languageVal} <em>{item.langLevel}</em></div>
-      </>
-      )
-    })
-  }
-  </div>
+  <Button variant="contained" onClick={()=>props.getLangAll()} style={{margin:'10px'}}>Add language</Button>
     </div>
   </>
 )
 }
-const mapStateToProps=(state)=>{
-  return {
-    langAll:state.langAll
-  }
-}
+
 const mapDispatchToProp= (dispatch) => {
   return {
   language: (val)=>dispatch(getLanguage(val)),
@@ -269,4 +253,4 @@ const mapDispatchToProp= (dispatch) => {
 }
 }
 
-export default connect(mapStateToProps, mapDispatchToProp)(Language)
+export default connect(null, mapDispatchToProp)(Language)
