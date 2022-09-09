@@ -34,6 +34,7 @@ if(resume[0].json_data == null) {
 else{
   return(
     <div style={{margin:"100px"}}>
+    <h2 style={{textAlign: "left", fontSize: "16px"}}>{resume[0].json_data.formvalues.name_resume}</h2>
       <article >
         <h2 style={{textAlign: "left", fontSize: "16px"}}>{resume[0].json_data.formvalues.fname} {resume[0].json_data.formvalues.lname}</h2>
         <h3 style={{textAlign: "left",fontSize: "12px"}}>{resume[0].json_data.formvalues.profession}</h3>
@@ -52,7 +53,7 @@ else{
         <h3 style={{textAlign: "left",fontSize: "12px"}}>TECHNICAL SKILLS</h3>
         <div style={{textAlign: "left"}}>
         {
-          resume[0].json_data.skills.filter((item,i)=>i>0).map((item, i)=>{
+          resume[0].json_data.skills&&resume[0].json_data.skills.filter((item,i)=>i>0).map((item, i)=>{
             return(
               <>
               <span style={{fontSize: "11px"}} key={i}>{item.skill},</span>
@@ -70,8 +71,8 @@ else{
             return(
               <>
                 <div key={i}>
-                  <div style={{textAlign: "left",fontSize: "11px"}}><strong>{resume[0].json_data.name_project}</strong> - <a style={{fontSize: "11px", textDecoration:'none'}}  href={resume[0].json_data.name_project_url} target="_blank">Github</a></div>
-                  <p style={{textAlign: "left",fontSize: "11px", marginLeft:"10px"}}>{resume[0].json_data.name_project_description}</p>
+                  <div style={{textAlign: "left",fontSize: "11px"}}><strong>{item.name_project}</strong> - <a style={{fontSize: "11px", textDecoration:'none'}}  href={item.name_project_url} target="_blank">Github</a></div>
+                  <p style={{textAlign: "left",fontSize: "11px", marginLeft:"10px"}}>{item.name_project_description}</p>
                 </div>
               </>
             )
