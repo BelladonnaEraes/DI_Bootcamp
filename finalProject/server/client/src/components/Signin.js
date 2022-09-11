@@ -12,6 +12,11 @@ const Signin =(props)=>{
   const [msg,setMsg] = useState('')
   const {setToken} = useContext(AppContext)
   const navigate = useNavigate();
+  const [passwordShown, setPasswordShown] = useState(false);
+  const togglePassword = () => {
+  setPasswordShown(!passwordShown);
+};
+
 
   const signin = async (e) => {
     e.preventDefault();
@@ -33,7 +38,7 @@ const Signin =(props)=>{
     <>
     <form onSubmit={signin} style={{marginTop:'10%'}}>
     <Input placeholder="Email" onChange={(e)=>setEmail(e.target.value)} name='email' type='text' style={{margin:'30px', width:'30%'}} /><br/>
-    <Input placeholder="Password" onChange={(e)=>setPassword(e.target.value)} name='password' type='text' style={{margin:'30px', width:'30%'}} /><br/>
+    <Input placeholder="Password" onChange={(e)=>setPassword(e.target.value)} name='password' type={passwordShown ? "text" : "password"} style={{margin:'30px', width:'30%'}} /><br/>
     <Button type="submit" value='Login' variant="contained" style={{margin:'20px'}}>Login</Button>
     </form>
     <div>{msg}</div>

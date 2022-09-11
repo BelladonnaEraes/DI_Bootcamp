@@ -11,8 +11,12 @@ const Register =()=>{
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [msg,setMsg] = useState('')
-
+  const [passwordShown, setPasswordShown] = useState(false);
   const navigate = useNavigate();
+  const togglePassword = () => {
+  setPasswordShown(!passwordShown);
+};
+
 
   const register = async (e) => {
     e.preventDefault();
@@ -34,7 +38,7 @@ const Register =()=>{
     <form onSubmit={register} style={{marginTop:'10%'}}>
     <Input placeholder="Name" onChange={(e)=>setUsername(e.target.value)} name='username' type='text' style={{margin:'30px', width:'30%'}} /><br/>
     <Input placeholder="Email" onChange={(e)=>setEmail(e.target.value)} name='email' type='text' style={{margin:'30px', width:'30%'}} /><br/>
-    <Input placeholder="Password" onChange={(e)=>setPassword(e.target.value)} name='password' type='text' style={{margin:'30px', width:'30%'}} /><br/>
+    <Input placeholder="Password" onChange={(e)=>setPassword(e.target.value)} name='password' type={passwordShown ? "text" : "password"} style={{margin:'30px', width:'20%'}} /><Button onClick={togglePassword}>Show</Button><br/>
     <Button type="submit" value='Register' variant="contained" style={{margin:'20px'}}>Register</Button>
     </form>
     <div>{msg}</div>

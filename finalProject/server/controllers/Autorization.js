@@ -47,12 +47,12 @@ export const Login = (req,res) =>{
     const name = data[0].username;
 
     const token = jwt.sign({id,mail,name},process.env.ACCESS_TOKEN_SECRET,{
-      expiresIn: '30000000s'
+      expiresIn: '3000000000s'
     });
 
     res.cookie('token', token, {
       httpOnly:true,
-      maxAge: 30000000 * 1000
+      maxAge: 3000000000 * 1000
     });
 
     res.json(token)
