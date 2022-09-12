@@ -34,22 +34,21 @@ if(resume[0].json_data == null) {
 else{
   return(
     <div style={{margin:"100px"}}>
-    <h2 style={{textAlign: "left", fontSize: "16px"}}>{resume[0].json_data.formvalues.name_resume}</h2>
       <article >
-        <h2 style={{textAlign: "left", fontSize: "16px"}}>{resume[0].json_data.formvalues.fname} {resume[0].json_data.formvalues.lname}</h2>
-        <h3 style={{textAlign: "left",fontSize: "12px"}}>{resume[0].json_data.formvalues.profession}</h3>
-        <p style={{textAlign: "left",fontSize: "11px"}}>{resume[0].json_data.formvalues.city} | {resume[0].json_data.formvalues.telephone} | {resume[0].json_data.formvalues.mail}</p>
+        <h2 style={{textAlign: "left", fontSize: "16px"}}>{resume[0].json_data.formvalues&&resume[0].json_data.formvalues.fname} {resume[0].json_data.formvalues&&resume[0].json_data.formvalues.lname}</h2>
+        <h3 style={{textAlign: "left",fontSize: "12px"}}>{resume[0].json_data.formvalues&&resume[0].json_data.formvalues.profession}</h3>
+        <p style={{textAlign: "left",fontSize: "11px"}}>{resume[0].json_data.formvalues&&resume[0].json_data.formvalues.city} | {resume[0].json_data.formvalues&&resume[0].json_data.formvalues.telephone} | {resume[0].json_data.formvalues&&resume[0].json_data.formvalues.mail}</p>
         <p style={{textAlign: "left",fontSize: "11px"}}>
-           <a style={{fontSize: "11px", textDecoration:'none'}} href={resume[0].json_data.formvalues.github} target="_blank" >Github</a> | <a
-           style={{fontSize: "11px", textDecoration:'none'}} href={resume[0].json_data.formvalues.linkedin} target="_blank">Linkedin</a> | <a
-           style={{fontSize: "11px", textDecoration:'none'}} href={resume[0].json_data.formvalues.portfolio} target="_blank">Portfolio</a> | <a
-           style={{fontSize: "11px", textDecoration:'none'}} href={resume[0].json_data.formvalues.website} target="_blank">Website</a> | <a
-           style={{fontSize: "11px", textDecoration:'none'}} href={resume[0].json_data.formvalues.blog} target="_blank">Blog</a>
+           <a style={{fontSize: "11px", textDecoration:'none'}} href={resume[0].json_data.formvalues&&resume[0].json_data.formvalues.github} target="_blank" >Github</a> | <a
+           style={{fontSize: "11px", textDecoration:'none'}} href={resume[0].json_data.formvalues&&resume[0].json_data.formvalues.linkedin} target="_blank">Linkedin</a> | <a
+           style={{fontSize: "11px", textDecoration:'none'}} href={resume[0].json_data.formvalues&&resume[0].json_data.formvalues.portfolio} target="_blank">Portfolio</a> | <a
+           style={{fontSize: "11px", textDecoration:'none'}} href={resume[0].json_data.formvalues&&resume[0].json_data.formvalues.website} target="_blank">Website</a> | <a
+           style={{fontSize: "11px", textDecoration:'none'}} href={resume[0].json_data.formvalues&&resume[0].json_data.formvalues.blog} target="_blank">Blog</a>
         </p>
       </article>
       <article>
         <h3 style={{textAlign: "left",fontSize: "12px"}}>SUMMARY</h3>
-        <p style={{textAlign: "left",fontSize: "11px"}}>{resume[0].json_data.formvalues1.summary}</p>
+        <p style={{textAlign: "left",fontSize: "11px"}}>{resume[0].json_data.formvalues1&&resume[0].json_data.formvalues1.summary}</p>
         <h3 style={{textAlign: "left",fontSize: "12px"}}>TECHNICAL SKILLS</h3>
         <div style={{textAlign: "left"}}>
         {
@@ -67,7 +66,7 @@ else{
         <h3 style={{textAlign: "left",fontSize: "12px"}}>TECHNICAL PROJECTS</h3>
         <div>
         {
-          resume[0].json_data.all_project.filter((item,i)=>i>0).map((item, i)=>{
+          resume[0].json_data.all_project&&resume[0].json_data.all_project.filter((item,i)=>i>0).map((item, i)=>{
             return(
               <>
                 <div key={i}>
@@ -82,7 +81,7 @@ else{
         <h3 style={{textAlign: "left",fontSize: "12px"}}>EXPERIENCE</h3>
         <div>
         {
-          resume[0].json_data.exp_job.filter((item,i)=>i>0).map((item,i)=>{
+          resume[0].json_data.exp_job&&resume[0].json_data.exp_job.filter((item,i)=>i>0).map((item,i)=>{
             return(
               <>
                 <div key={i}>
@@ -100,7 +99,7 @@ else{
         <h3 style={{textAlign: "left",fontSize: "12px"}}>EDUCATION</h3>
           <div>
             {
-              resume[0].json_data.formvalues2.filter((item,i)=>i>0).map((item, i)=>{
+              resume[0].json_data.formvalues2&&resume[0].json_data.formvalues2.filter((item,i)=>i>0).map((item, i)=>{
                 return(
                   <>
                     <div key={i}>
@@ -117,7 +116,7 @@ else{
       <h3 style={{textAlign: "left",fontSize: "12px"}}>LANGUAGES</h3>
         <div>
           {
-            resume[0].json_data.langAll.map((item, i)=>{
+            resume[0].json_data.langAll&&resume[0].json_data.langAll.map((item, i)=>{
               return(
                 <>
                 <div key={i} style={{textAlign: "left",fontSize: "11px"}}><strong>{item.languageVal}</strong> {item.langLevel}</div>

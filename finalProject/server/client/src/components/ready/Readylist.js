@@ -43,7 +43,7 @@ const Readylist =(props)=>{
           return(
             <>
             <Link to={`/readylist/${item.id}`} style={{textDecoration:'none'}}>
-            <h1>Resume {item.json_data.formvalues.name_resume}</h1>
+            <h1>Resume {i}</h1>
             </Link>
             </>
           )
