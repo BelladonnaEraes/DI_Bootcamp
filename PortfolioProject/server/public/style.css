@@ -6,28 +6,51 @@ body {
 * {
     font-family: 'Playfair Display', serif;
 }
-nav {
-	background-color: rgba(224, 224, 224, 0.7);
-  display: flex;
-	position: fixed;
-	width: 100%;
-	margin: 0;
-	z-index: 999999;
+
+.dropbtn {
+    background-color: SaddleBrown;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    left: 15px;
+    position: fixed;
+    z-index: 1;
 }
-.nav {
-	color: black;
-	text-decoration: none;
-	text-align: center;
-	padding: 20px 20px;
+
+.dropdown {
+  position: relative;
+  display: inline-block;
 }
-.nav:hover{
-	color: white;
-	background-color: rgb(139, 69, 19);
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 2;
 }
-nav a{
-	margin-left: 20px;
-	text-align: center;
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
 }
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: SaddleBrown;
+}
+
 
 h2 {
 	color: black;
@@ -176,3 +199,55 @@ a{
 	height: 15vh;
 	width: auto;
 }
+@media only screen and (min-width: 180px) and (max-width: 768px) {
+
+.header {
+	background-image: url(pexels-jeshootscom-442575.jpg);
+	background-size: cover;
+	height: 30vh;
+	padding: 10vh;
+	font-size: 1.5vh;
+	text-align: center;
+	margin: 0px 20px 20px 20px;
+	}
+h1 {
+	color: black;
+	text-align: center;
+	font-family: 'Cinzel Decorative', cursive;
+	font-size: 5vh;
+	}
+.icons {
+	width: 10vh;
+	}
+	aside {
+	float: right;
+	width: 90%;
+	margin: 1vh;
+	border-left: 3px rgb(63, 22, 88) solid;
+	padding-left: 10px;
+	}
+	.card {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.main {
+    padding-left: 2vh;
+    padding-right: 2vh;
+}
+.buttons a {
+    background-color: rgb(139, 69, 19);
+    color: white;
+    font-size: 16px;
+}
+}
+
+
+
+
+
+
+
+
+

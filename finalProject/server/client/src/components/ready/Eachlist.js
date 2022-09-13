@@ -15,8 +15,6 @@ const Eachlist =(props)=>{
   getData();
   },[])
 
-
-
   const getData = async() => {
   try{
     const result = await axios.get(`/readylist/${params.id}`);

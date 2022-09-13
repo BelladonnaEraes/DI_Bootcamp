@@ -8,8 +8,6 @@ import './stylecomponents.css'
 
 const Projects=(props)=>{
 
-  console.log("Projects", props.all_project )
-
   return(
     <>
     <h4>Technical project</h4><br/>

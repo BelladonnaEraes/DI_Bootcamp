@@ -8,10 +8,6 @@ import './stylecomponents.css'
 
 const Eduandlang =(props)=>{
 
-
-
-
-console.log("Eduandlang", props.formvalues2 )
   return(
     <>
     <h3 style={{margin:'30px'}}><i>Step 3: Education and language information</i></h3>

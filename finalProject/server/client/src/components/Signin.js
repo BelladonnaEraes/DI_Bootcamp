@@ -24,7 +24,6 @@ const Signin =(props)=>{
       const result = await axios.post('/signin',{
         email,password
       });
-      console.log(result.data);
       if(result.status==200){
         setToken(result.data)
         navigate('/home')

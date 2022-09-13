@@ -8,10 +8,7 @@ import jwt_decode from 'jwt-decode'
 
 const Readylist =(props)=>{
   const [resume, setResume] = useState([]);
-  console.log(resume);
   const {token} = useContext(AppContext);
-  // const [token1, setToken]=useState({})
-
 
   useEffect(()=>{
   showResume()
